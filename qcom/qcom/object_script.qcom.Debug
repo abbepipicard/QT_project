@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\aboutdialog.o
+./debug\qextserialport.o
+./debug\qcustomplot.o
+./debug\qextserialport_win.o
+./debug\qrc_images.o
+./debug\moc_mainwindow.o
+./debug\moc_aboutdialog.o
+./debug\moc_qcustomplot.o
+);

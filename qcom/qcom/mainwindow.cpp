@@ -114,15 +114,15 @@ void MainWindow::initplot123()
     //每次仅用一个graph画
     if(ui->yawradioButton->isChecked())
     {
-       ui->customPlot->graph(0)->setName("mag_x");
+       ui->customPlot->graph(0)->setName("yaw");
     }
     if(ui->pitchradioButton->isChecked())
     {
-       ui->customPlot->graph(0)->setName("mag_y");
+       ui->customPlot->graph(0)->setName("pitch");
     }
     if(ui->rollradioButton->isChecked())
     {
-       ui->customPlot->graph(0)->setName("mag_z");
+       ui->customPlot->graph(0)->setName("roll");
     }
 }
 
@@ -578,9 +578,9 @@ void MainWindow::time_update()
         this->initplot123();
         if(ui->yawradioButton->isChecked())
         {
-            buf1 = "mag_x";
+            buf1 = "yaw";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 7),7);
+            buf1 = buf.mid((i + 4),5);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);
@@ -589,9 +589,9 @@ void MainWindow::time_update()
         }
         if(ui->pitchradioButton->isChecked())
         {
-            buf1 = "mag_y";
+            buf1 = "pitch";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 7),7);
+            buf1 = buf.mid((i + 6),5);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);
@@ -600,9 +600,9 @@ void MainWindow::time_update()
         }
         if(ui->rollradioButton->isChecked())
         {
-            buf1 = "mag_z";
+            buf1 = "roll";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 7),7);
+            buf1 = buf.mid((i + 5),5);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);
@@ -617,7 +617,7 @@ void MainWindow::time_update()
         {
             buf1 = "ex";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 5),7);
+            buf1 = buf.mid((i + 3),7);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);
@@ -628,7 +628,7 @@ void MainWindow::time_update()
         {
             buf1 = "ey";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 5),7);
+            buf1 = buf.mid((i + 3),7);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);
@@ -639,7 +639,7 @@ void MainWindow::time_update()
         {
             buf1 = "ez";
             i = buf.indexOf(buf1);
-            buf1 = buf.mid((i + 5),7);
+            buf1 = buf.mid((i + 3),7);
             sample_value = buf1.toDouble();
             ui->customPlot->graph(0)->addData(sample_time,sample_value);
             ui->customPlot->graph(0)->removeDataBefore(sample_time - Plot_Count - 1);

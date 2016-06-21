@@ -42,7 +42,7 @@
 
 #define Plot_Count 160
 
-#define Plot1_MaxY 500
+#define Plot1_MaxY 180
 #define Plot2_MaxY 0.5
 #define Huitu_Inteval 10
 

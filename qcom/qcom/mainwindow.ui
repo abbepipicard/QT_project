@@ -397,21 +397,21 @@ QLCDNumber{background:url(:/images/lcd.bmp)}
      <item row="15" column="0">
       <widget class="QRadioButton" name="yawradioButton">
        <property name="text">
-        <string>mag_x</string>
+        <string>yaw</string>
        </property>
       </widget>
      </item>
      <item row="16" column="0">
       <widget class="QRadioButton" name="pitchradioButton">
        <property name="text">
-        <string>mag_y</string>
+        <string>pitch</string>
        </property>
       </widget>
      </item>
      <item row="17" column="0">
       <widget class="QRadioButton" name="rollradioButton">
        <property name="text">
-        <string>mag_z</string>
+        <string>roll</string>
        </property>
       </widget>
      </item>
