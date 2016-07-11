@@ -107,6 +107,7 @@ private slots:
     //end by
     void on_delayspinBox_editingFinished();
 
+    // newly added
     void on_huitupushButton_clicked();
     void on_forwardpushButton_clicked();
     void on_leftpushButton_clicked();
@@ -118,8 +119,11 @@ private slots:
     void on_sixtypushButton_clicked();
     void on_ninetypushButton_clicked();
     void on_yibaierpushButton_clicked();
+    void on_thirtypushButton_2_clicked();
     void on_yibaiwupushButton_clicked();
     void on_yibaiwupushButton_2_clicked();
+    void on_sixtypushButton_2_clicked();
+    void on_ninetypushButton_2_clicked();
 };
 
 #endif // MAINWINDOW_H

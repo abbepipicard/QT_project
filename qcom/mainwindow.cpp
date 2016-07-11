@@ -1017,7 +1017,7 @@ void MainWindow::on_yibaiwupushButton_2_clicked()
     bool ok;
     char data;
     QStringList list;
-    str = "55 aa 1e 01 03 20 00 e1 fe";
+    str = "55 aa 1e 01 03 20 06 fe db";
     list = str.split(" ");
     for(int i = 0; i < list.count(); i++){
         if(list.at(i) == " ")
@@ -1041,3 +1041,100 @@ void MainWindow::on_yibaiwupushButton_2_clicked()
     //界面控制
     ui->textBrowser->setTextColor(Qt::lightGray);
 }
+
+void MainWindow::on_thirtypushButton_2_clicked()
+{
+    QByteArray buf;
+    QString str;
+    bool ok;
+    char data;
+    QStringList list;
+    str = "55 aa 1e 01 03 20 fe d4 0d";
+    list = str.split(" ");
+    for(int i = 0; i < list.count(); i++){
+        if(list.at(i) == " ")
+            continue;
+        if(list.at(i).isEmpty())
+            continue;
+        data = (char)list.at(i).toInt(&ok, 16);
+        if(!ok){
+            QMessageBox::information(this, tr("提示消息"), tr("输入的数据格式有错误！"), QMessageBox::Ok);
+            if(obotimer != NULL)
+                obotimer->stop();
+            ui->sendmsgBtn->setText(tr("发送"));
+            ui->sendmsgBtn->setIcon(QIcon(":new/prefix1/src/send.png"));
+            return;
+        }
+        buf.append(data);
+    }
+    //发送数据
+    myCom->write(buf);
+    ui->statusBar->showMessage(tr("前进"));
+    //界面控制
+    ui->textBrowser->setTextColor(Qt::lightGray);
+}
+
+void MainWindow::on_sixtypushButton_2_clicked()
+{
+    QByteArray buf;
+    QString str;
+    bool ok;
+    char data;
+    QStringList list;
+    str = "55 aa 1e 01 03 20 fd ab 37";
+    list = str.split(" ");
+    for(int i = 0; i < list.count(); i++){
+        if(list.at(i) == " ")
+            continue;
+        if(list.at(i).isEmpty())
+            continue;
+        data = (char)list.at(i).toInt(&ok, 16);
+        if(!ok){
+            QMessageBox::information(this, tr("提示消息"), tr("输入的数据格式有错误！"), QMessageBox::Ok);
+            if(obotimer != NULL)
+                obotimer->stop();
+            ui->sendmsgBtn->setText(tr("发送"));
+            ui->sendmsgBtn->setIcon(QIcon(":new/prefix1/src/send.png"));
+            return;
+        }
+        buf.append(data);
+    }
+    //发送数据
+    myCom->write(buf);
+    ui->statusBar->showMessage(tr("前进"));
+    //界面控制
+    ui->textBrowser->setTextColor(Qt::lightGray);
+}
+
+void MainWindow::on_ninetypushButton_2_clicked()
+{
+    QByteArray buf;
+    QString str;
+    bool ok;
+    char data;
+    QStringList list;
+    str = "55 aa 1e 01 03 20 fc 7c 67";
+    list = str.split(" ");
+    for(int i = 0; i < list.count(); i++){
+        if(list.at(i) == " ")
+            continue;
+        if(list.at(i).isEmpty())
+            continue;
+        data = (char)list.at(i).toInt(&ok, 16);
+        if(!ok){
+            QMessageBox::information(this, tr("提示消息"), tr("输入的数据格式有错误！"), QMessageBox::Ok);
+            if(obotimer != NULL)
+                obotimer->stop();
+            ui->sendmsgBtn->setText(tr("发送"));
+            ui->sendmsgBtn->setIcon(QIcon(":new/prefix1/src/send.png"));
+            return;
+        }
+        buf.append(data);
+    }
+    //发送数据
+    myCom->write(buf);
+    ui->statusBar->showMessage(tr("前进"));
+    //界面控制
+    ui->textBrowser->setTextColor(Qt::lightGray);
+}
+
